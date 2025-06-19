@@ -1,0 +1,181 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <style>
+    :root {
+      --primary-color: #00aaff;
+      --background-color: #0a0a0a;
+      --text-color: #ffffff;
+      --accent-color: #0077cc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+      padding-top: 6rem;
+    }
+
+    .about-title {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .typing {
+      display: inline-block;
+      border-right: 2px solid var(--primary-color);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: var(--primary-color); }
+      50% { border-color: transparent; }
+    }
+
+    .typing::after {
+      content: '';
+      animation: blink 0.7s infinite;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin-top: 2rem;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .about-text {
+      flex: 1 1 300px;
+      font-size: 1.1rem;
+      text-align: left;
+    }
+
+    .about-image {
+      flex: 1 1 250px;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      border: 3px solid var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+    }
+    header {
+      position: fixed;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+    }
+
+    nav {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px 15px;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #0066ff;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.5);
+      transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header> 
+  <nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'projects'%}">Projects</a>
+    <a href="{% url 'about'%}">About</a>
+    <a href="{% url 'contact'%}">Contact</a>
+  </nav>
+</header>
+
+  <section class="about-section">
+    <h1 class="about-title">
+      <span class="typing" id="typing"></span>
+    </h1>
+
+    <div class="about-content">
+      <div class="about-text">
+        <p>Hello! I'm <strong>Abhishek Nanda</strong>, a passionate web developer with a love for clean code and modern design.</p>
+        <p>I specialize in building fast, responsive, and accessible websites using technologies like HTML, CSS, JavaScript, and Python/Django.</p>
+        <p>In my free time, I enjoy solving coding challenges, exploring UI/UX trends, and contributing to open-source projects.</p>
+      </div>
+
+      <div class="about-image">
+        <img src="{% static 'fej8m4.jpg' %}" alt="Your Photo" />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const text = "About Me";
+    const typingElement = document.getElementById("typing");
+    let index = 0;
+
+    function typeLetter() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeLetter, 150);
+      }
+    }
+
+    typeLetter();
+  </script>
+
+</body>
+</html>

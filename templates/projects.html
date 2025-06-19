@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek || Projects</title>
+    <style>
+       :root {
+          --primary-color: #00aaff;
+          --background-color: #0a0a0a;
+          --text-color: #ffffff;
+          --accent-color: #0077cc;
+        }
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: var(--background-color);
+          color: var(--text-color);
+          line-height: 1.6;
+        } 
+        header {
+          position: fixed;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.85);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+          z-index: 10;
+        }
+
+        nav {
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 40px;
+        }
+
+        nav a {
+          color: #ddd;
+          text-decoration: none;
+          font-size: 1rem;
+          padding: 10px 15px;
+          transition: all 0.3s ease;
+          border-radius: 5px;
+        }
+        nav a:hover {
+          background-color: #0066ff;
+          color: #fff;
+          box-shadow: 0 4px 12px rgba(0, 102, 255, 0.5);
+          transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+          nav {
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px;
+          }
+        }
+
+        main {
+            padding-top: 100px;
+            padding-left: 50px;
+        }
+
+        .span {
+            display: inline-block;
+        }
+
+        .project-logo {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+        }
+
+        .project-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding-right: 50px;
+        }
+
+        .text-content {
+            max-width: 50%;
+        }
+
+        @media (max-width: 900px) {
+            .project-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-content, img {
+                max-width: 100%;
+            }
+        }
+        h1{
+            color: green;
+        }
+        img{
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header> 
+        <nav>
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'projects'%}">Projects</a>
+          <a href="{% url 'about'%}">About</a>
+          <a href="{% url 'contact'%}">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="project-container">
+            <div class="text-content">
+                <h1>1. CodeX : Team Project</h1>
+                <h3>DESH KA KISAN : Empowering farmers with direct access to market. Grow, connect, and prosper with trust and technology</h3>
+                <a href="https://github.com/Abhishek-Dev-84/Desh_ka_kisan"><img src="{% static 'github-icon-filled-256.png'%}" alt="github-project-link"></a>
+                <a href="https://www.linkedin.com/in/abhishek-nanda-56aab731a/"><img src="{% static 'images - Copy.png'%}" alt="linkedin-project-link"></a>
+            </div>
+            <img class="project-logo" src="{% static 'WhatsApp Image 2025-06-18 at 22.56.45_df1a5b5a.jpg'%}" alt="project-logo">
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,169 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhishek || Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      background-color: #111;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+    }
+
+    nav {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px 15px;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #0066ff;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.5);
+      transform: scale(1.05);
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      padding: 40px;
+      padding-top: 100px; /* account for fixed nav */
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .text-content {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .text-content h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .text-content p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #ccc;
+      max-width: 500px;
+      line-height: 1.5;
+    }
+
+    .text-content a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #0066ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .text-content a:hover {
+      background: #0051cc;
+    }
+
+    .profile-img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header> 
+  <nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'projects'%}">Projects</a>
+    <a href="{% url 'about'%}">About</a>
+    <a href="{% url 'contact'%}">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="text-content">
+      <h1>I'm Abhishek Nanda, a Web Developer</h1>
+      <p>Creative and detail-oriented Web Developer <br> crafting responsive, user-friendly websites.</p>
+      <a href="contact">Get in Touch</a>
+    </div>
+    <img src="{% static 'WhatsApp Image 2025-06-18 at 14.15.19_e52a1b61.jpg' %}" alt="Abhishek - Web Developer" class="profile-img" />
+  </div>
+</div>
+
+
+</body>
+</html>
