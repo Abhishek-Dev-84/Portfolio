@@ -1,169 +1,157 @@
-##Portfolio Website — Abhishek Nanda
+PORTFOLIO WEBSITE — ABHISHEK NANDA
 
-A modern, responsive portfolio website built to showcase my projects, technical skills, experience, and approach to software development. This portfolio represents not just completed work, but also how I think about engineering, problem-solving, scalability, and user experience.
+A modern and responsive portfolio website built to showcase my projects, technical skills, and development experience. This portfolio reflects my approach to building clean, functional, and scalable web applications using both frontend and backend technologies.
 
-The goal of this website is simple:
-
-Present my work clearly
-
-Demonstrate technical capability
-
-Highlight real-world development skills
-
-Create a professional digital presence
-
+The purpose of this website is to present my work professionally while demonstrating practical development skills, UI design understanding, and backend integration capabilities.
 
 
 ---
 
-About Me
+ABOUT ME
 
-I’m Abhishek Nanda, a developer focused on building performant, scalable, and user-centric web applications.
+I’m Abhishek Nanda, a developer focused on building responsive web applications and backend systems with clean architecture and practical functionality.
 
-I primarily work with technologies like:
+I primarily work with:
 
-React
+HTML5
 
-django
+CSS3
 
-MongoDB / PostgreSQL
+JavaScript
 
-Tailwind CSS
+Django
+
+Django REST Framework
 
 
-My focus is on creating clean interfaces, maintainable architecture, and practical solutions instead of overengineered demo projects.
+My focus is on writing maintainable code, building efficient backend APIs, and creating user interfaces that are simple, fast, and functional.
 
-This portfolio includes selected projects, technical skills, and information about my development journey and future goals.
+This portfolio includes selected projects, technical skills, and information about my development journey.
 
 
 ---
 
-Features
+FEATURES
 
-Fully responsive modern UI
+Responsive modern UI
 
-Smooth animations and transitions
-
-Dark / light mode support
+Clean and minimal design
 
 Project showcase section
 
 Skills and technology stack section
 
-About section with professional overview
+About section
 
 Contact section
 
-Optimized performance and accessibility
+Backend integration support
 
-Mobile-friendly design
+Mobile-friendly layout
 
-Clean and maintainable codebase
-
-
-
----
-
-Tech Stack
-
-Frontend
-
-React
-
-Tailwind CSS
-
-
-Backend
-
-python
-
-django
-
-django rest framework 
-
-
-Database
-
-MongoDB / PostgreSQL
-
-
-Deployment
-
-Vercel / Netlify
+Organized and maintainable code structure
 
 
 
 ---
 
-Purpose of This Portfolio
+TECH STACK
+
+FRONTEND
+
+HTML5
+
+CSS3
+
+JavaScript
+
+
+BACKEND
+
+Django
+
+Django REST Framework
+
+
+
+---
+
+PURPOSE OF THIS PORTFOLIO
 
 This website is designed to:
 
-Showcase development projects
+Showcase my development projects
 
-Demonstrate frontend and backend capabilities
+Demonstrate frontend and backend skills
 
-Highlight UI/UX understanding
+Highlight API development capabilities
 
-Serve as a professional portfolio for recruiters, clients, and collaborators
-
-
-
----
-
-What Makes This Different
-
-Most portfolio websites look identical because they rely on templates, generic descriptions, and fake “passion-driven” language.
-
-This portfolio focuses on:
-
-Real projects
-
-Clear communication
-
-Strong UI structure
-
-Performance-focused development
-
-Practical engineering decisions
+Present my work in a professional format
 
 
 
 ---
 
-Future Improvements
+DEVELOPMENT APPROACH
 
-Planned additions include:
+Rather than relying heavily on templates or unnecessary complexity, this portfolio focuses on:
 
-Blog section for technical writing
+Clean UI structure
 
-Project case studies
+Practical functionality
 
-Admin dashboard for content management
+Readable and maintainable code
 
-AI-powered interactive features
+Responsive design principles
 
-Advanced animations and micro-interactions
-
-Deployment
-
-This portfolio can be deployed easily using:
-
-Vercel
-
-Netlify
-
-GitHub Pages
+Scalable backend architecture
 
 
 
 ---
 
-Contact
+FUTURE IMPROVEMENTS
+
+Planned updates include:
+
+Advanced animations and interactions
+
+Blog or article section
+
+More detailed project case studies
+
+Improved backend features
+
+Deployment optimization
+
+
+
+---
+
+INSTALLATION
+
+Clone the repository:
+
+git clone https://github.com/your-username/your-repo-name.git
+
+Move into the project directory:
+
+cd your-repo-name
+
+Run the project locally.
+
+
+---
+
+CONTACT
 
 Abhishek Nanda
 
-Feel free to connect for collaborations, freelance opportunities, or development discussions.
+Feel free to connect for collaborations, development discussions, or project opportunities.
 
 
 ---
+
+NOTE
+
+This project currently does not include a license. All rights are reserved unless stated otherwise.
