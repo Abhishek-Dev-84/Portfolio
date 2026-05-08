@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Abhishek || Projects</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Inter,sans-serif;
+      background:#090b10;
+      color:white;
+      overflow-x:hidden;
+
+      background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+      background-size:40px 40px;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+
+      background:
+      radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 30%),
+      radial-gradient(circle at bottom left, rgba(255,255,255,0.04), transparent 30%);
+
+      z-index:-2;
+    }
+
+    .blur{
+      position:fixed;
+      width:500px;
+      height:500px;
+      border-radius:50%;
+      filter:blur(140px);
+      opacity:0.14;
+      z-index:-1;
+      animation:float 10s ease-in-out infinite;
+    }
+
+    .blur1{
+      background:white;
+      top:-200px;
+      left:-150px;
+    }
+
+    .blur2{
+      background:#666;
+      bottom:-200px;
+      right:-150px;
+      animation-delay:3s;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-30px);
+      }
+    }
+
+    header{
+      position:fixed;
+      width:100%;
+      background:rgba(8,10,14,0.8);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      z-index:100;
+    }
+
+    nav{
+      max-width:1300px;
+      margin:auto;
+      height:80px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 40px;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:12px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:#9ca3af;
+      padding:10px 18px;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      background:rgba(255,255,255,0.05);
+      color:white;
+    }
+
+    main{
+      max-width:1400px;
+      margin:auto;
+      padding:150px 40px 100px;
+    }
+
+    .hero{
+      min-height:70vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:6rem;
+      line-height:0.9;
+      letter-spacing:-5px;
+      margin-bottom:30px;
+    }
+
+    .hero p{
+      color:#9ca3af;
+      line-height:2;
+      max-width:800px;
+      margin:auto;
+      font-size:1.05rem;
+    }
+
+    .scroll-hint{
+      margin-top:45px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      font-size:0.85rem;
+      text-transform:uppercase;
+      letter-spacing:2px;
+    }
+
+    .mouse{
+      width:28px;
+      height:45px;
+      border:2px solid rgba(255,255,255,0.5);
+      border-radius:30px;
+      position:relative;
+    }
+
+    .mouse::before{
+      content:"";
+      width:4px;
+      height:10px;
+      border-radius:20px;
+      background:white;
+      position:absolute;
+      left:50%;
+      top:8px;
+      transform:translateX(-50%);
+      animation:scroll 1.5s infinite;
+    }
+
+    @keyframes scroll{
+      0%{
+        opacity:0;
+        top:8px;
+      }
+      50%{
+        opacity:1;
+      }
+      100%{
+        opacity:0;
+        top:20px;
+      }
+    }
+
+    .projects{
+      display:flex;
+      flex-direction:column;
+      gap:70px;
+    }
+
+    .project-card{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+
+      background:rgba(255,255,255,0.03);
+
+      border:1px solid rgba(255,255,255,0.06);
+
+      border-radius:34px;
+
+      padding:45px;
+
+      position:relative;
+
+      overflow:hidden;
+
+      backdrop-filter:blur(18px);
+
+      transition:0.5s ease;
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(255,255,255,0.12);
+    }
+
+    .project-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+
+      background:
+      linear-gradient(120deg,
+      transparent,
+      rgba(255,255,255,0.04),
+      transparent);
+
+      transform:translateX(-100%);
+      transition:0.8s;
+    }
+
+    .project-card:hover::before{
+      transform:translateX(100%);
+    }
+
+    .project-visual{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:500px;
+    }
+
+    .logo-container{
+      position:relative;
+      width:320px;
+      height:320px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:2;
+    }
+
+    .logo-ring{
+      position:absolute;
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,0.08);
+      animation:rotate 12s linear infinite;
+    }
+
+    .logo-ring::before{
+      content:"";
+      position:absolute;
+      inset:18px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    @keyframes rotate{
+      from{
+        transform:rotate(0deg);
+      }
+      to{
+        transform:rotate(360deg);
+      }
+    }
+
+    .project-logo{
+      width:230px;
+      height:230px;
+      object-fit:cover;
+      border-radius:35px;
+
+      background:#111;
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      box-shadow:
+      0 20px 60px rgba(0,0,0,0.5);
+
+      transition:0.5s ease;
+    }
+
+    .project-card:hover .project-logo{
+      transform:scale(1.05);
+    }
+
+    .floating-ui{
+      position:absolute;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.07);
+      backdrop-filter:blur(20px);
+      border-radius:18px;
+      padding:16px;
+      animation:floatCard 5s ease-in-out infinite;
+    }
+
+    .floating-ui.one{
+      top:30px;
+      left:0;
+      width:180px;
+    }
+
+    .floating-ui.two{
+      bottom:40px;
+      right:10px;
+      width:200px;
+      animation-delay:2s;
+    }
+
+    @keyframes floatCard{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-12px);
+      }
+    }
+
+    .mini-line{
+      height:10px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.07);
+      margin-bottom:10px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .mini-line::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      width:40%;
+      background:rgba(255,255,255,0.4);
+      animation:slide 3s linear infinite;
+    }
+
+    @keyframes slide{
+      from{
+        transform:translateX(-100%);
+      }
+      to{
+        transform:translateX(300%);
+      }
+    }
+
+    .tag-group{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+
+    .tag-group span{
+      padding:8px 14px;
+      border-radius:30px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.06);
+      font-size:0.75rem;
+    }
+
+    .project-info{
+      position:relative;
+      z-index:2;
+    }
+
+    .project-number{
+      color:#8b949e;
+      letter-spacing:3px;
+      font-size:0.85rem;
+      margin-bottom:20px;
+    }
+
+    .project-info h2{
+      font-size:3rem;
+      margin-bottom:25px;
+      letter-spacing:-2px;
+    }
+
+    .project-info p{
+      color:#9ca3af;
+      line-height:2;
+      margin-bottom:35px;
+      max-width:600px;
+    }
+
+    .stack{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:35px;
+    }
+
+    .stack span{
+      padding:12px 18px;
+      border-radius:40px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.06);
+      font-size:0.85rem;
+    }
+
+    .links{
+      display:flex;
+      gap:18px;
+    }
+
+    .links a{
+      width:55px;
+      height:55px;
+      border-radius:18px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      background:rgba(255,255,255,0.04);
+
+      border:1px solid rgba(255,255,255,0.06);
+
+      transition:0.3s;
+    }
+
+    .links a:hover{
+      transform:translateY(-4px);
+      background:rgba(255,255,255,0.08);
+    }
+
+    .links img{
+      width:22px;
+      filter:invert(1);
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(80px);
+      transition:1s ease;
+    }
+
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    footer{
+      text-align:center;
+      padding:100px 20px 50px;
+      color:#8b949e;
+    }
+
+    @media(max-width:1100px){
+
+      .project-card{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:4rem;
+      }
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+        gap:14px;
+      }
+
+      .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      main{
+        padding:180px 20px 80px;
+      }
+
+      .hero h1{
+        font-size:3rem;
+      }
+
+      .project-info h2{
+        font-size:2rem;
+      }
+
+      .project-card{
+        padding:30px;
+      }
+
+      .logo-container{
+        width:250px;
+        height:250px;
+      }
+
+      .project-logo{
+        width:180px;
+        height:180px;
+      }
+
+      .floating-ui{
+        transform:scale(0.9);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="blur blur1"></div>
+  <div class="blur blur2"></div>
+
+  <header>
+
+    <nav>
+
+      <div><b>ABHISHEK</b></div>
+
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero reveal">
+
+      <div>
+
+        <h1>ENGINEERING<br>REAL PRODUCTS</h1>
+
+        <p>
+          Building scalable systems, intelligent workflows and modern digital
+          products focused on performance, accessibility and real-world impact.
+        </p>
+
+        <div class="scroll-hint">
+          <div class="mouse"></div>
+          <span>Scroll To Explore</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="projects">
+
+      <!-- PROJECT 1 -->
+
+      <div class="project-card reveal">
+
+        <div class="project-visual">
+
+          <div class="floating-ui one">
+
+            <div class="mini-line" style="width:90%"></div>
+            <div class="mini-line" style="width:65%"></div>
+            <div class="mini-line" style="width:80%"></div>
+
+            <div class="tag-group">
+              <span>React</span>
+              <span>Django</span>
+            </div>
+
+          </div>
+
+          <div class="logo-container">
+
+            <div class="logo-ring"></div>
+
+            <img
+              class="project-logo"
+              src="WhatsApp Image 2025-06-18 at 22.56.45_df1a5b5a.jpg"
+              alt=""
+            >
+
+          </div>
+
+          <div class="floating-ui two">
+
+            <div class="mini-line" style="width:85%"></div>
+            <div class="mini-line" style="width:75%"></div>
+
+            <div class="tag-group">
+              <span>Farmers</span>
+              <span>Market</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-info">
+
+          <div class="project-number">PROJECT 01</div>
+
+          <h2>Desh Ka Kisan</h2>
+
+          <p>
+            A farmer-first digital ecosystem connecting agricultural producers
+            directly with markets through transparency, accessibility and
+            realtime communication.
+          </p>
+
+          <div class="stack">
+            <span>Frontend</span>
+            <span>Backend</span>
+            <span>Realtime</span>
+          </div>
+
+          <div class="links">
+
+            <a href="https://github.com/Abhishek-Dev-84/Desh_ka_kisan">
+              <img src="github-icon-filled-256.png">
+            </a>
+
+            <a href="https://www.linkedin.com/in/abhishek-nanda-56aab731a/">
+              <img src="images - Copy.png">
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 2 -->
+
+      <div class="project-card reveal">
+
+        <div class="project-info">
+
+          <div class="project-number">PROJECT 02</div>
+
+          <h2>Janseva Smart Kiosk</h2>
+
+          <p>
+            Aadhaar-enabled multilingual self-service kiosk platform designed
+            for accessible government services and secure digital workflows.
+          </p>
+
+          <div class="stack">
+            <span>Django</span>
+            <span>AI Integration</span>
+            <span>Secure UX</span>
+          </div>
+
+          <div class="links">
+
+            <a href="#">
+              <img src="github-icon-filled-256.png">
+            </a>
+
+            <a href="#">
+              <img src="images - Copy.png">
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="project-visual">
+
+          <div class="floating-ui one">
+
+            <div class="mini-line" style="width:90%"></div>
+            <div class="mini-line" style="width:70%"></div>
+
+            <div class="tag-group">
+              <span>OCR</span>
+              <span>Biometric</span>
+            </div>
+
+          </div>
+
+          <div class="logo-container">
+
+            <div class="logo-ring"></div>
+
+            <img
+              class="project-logo"
+              src="cdac_project_logo.png"
+              alt=""
+            >
+
+          </div>
+
+          <div class="floating-ui two">
+
+            <div class="mini-line" style="width:88%"></div>
+            <div class="mini-line" style="width:62%"></div>
+
+            <div class="tag-group">
+              <span>GovTech</span>
+              <span>Security</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 3 -->
+
+      <div class="project-card reveal">
+
+        <div class="project-visual">
+
+          <div class="floating-ui one">
+
+            <div class="mini-line" style="width:80%"></div>
+            <div class="mini-line" style="width:65%"></div>
+
+            <div class="tag-group">
+              <span>ML</span>
+              <span>IoT</span>
+            </div>
+
+          </div>
+
+          <div class="logo-container">
+
+            <div class="logo-ring"></div>
+
+            <img
+              class="project-logo"
+              src="swachhTrack-logo.png"
+              alt=""
+            >
+
+          </div>
+
+          <div class="floating-ui two">
+
+            <div class="mini-line" style="width:75%"></div>
+            <div class="mini-line" style="width:60%"></div>
+
+            <div class="tag-group">
+              <span>Tracking</span>
+              <span>Analytics</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="project-info">
+
+          <div class="project-number">PROJECT 03</div>
+
+          <h2>SwachhTrack</h2>
+
+          <p>
+            Smart waste-management intelligence platform using sensors,
+            automation and predictive systems for collection optimization.
+          </p>
+
+          <div class="stack">
+            <span>Machine Learning</span>
+            <span>Optimization</span>
+            <span>Automation</span>
+          </div>
+
+          <div class="links">
+
+            <a href="#">
+              <img src="github-icon-filled-256.png">
+            </a>
+
+            <a href="#">
+              <img src="images - Copy.png">
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 4 -->
+
+      <div class="project-card reveal">
+
+        <div class="project-info">
+
+          <div class="project-number">PROJECT 04</div>
+
+          <h2>Klyra</h2>
+
+          <p>
+            AI-powered pet healthcare ecosystem integrating smart diagnostics,
+            veterinary access and intelligent wellness systems.
+          </p>
+
+          <div class="stack">
+            <span>Flutter</span>
+            <span>AI</span>
+            <span>Healthcare</span>
+          </div>
+
+          <div class="links">
+
+            <a href="#">
+              <img src="github-icon-filled-256.png">
+            </a>
+
+            <a href="#">
+              <img src="images - Copy.png">
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="project-visual">
+
+          <div class="floating-ui one">
+
+            <div class="mini-line" style="width:90%"></div>
+            <div class="mini-line" style="width:70%"></div>
+
+            <div class="tag-group">
+              <span>Flutter</span>
+              <span>AI</span>
+            </div>
+
+          </div>
+
+          <div class="logo-container">
+
+            <div class="logo-ring"></div>
+
+            <img
+              class="project-logo"
+              src="klyra-logo.png"
+              alt=""
+            >
+
+          </div>
+
+          <div class="floating-ui two">
+
+            <div class="mini-line" style="width:85%"></div>
+            <div class="mini-line" style="width:60%"></div>
+
+            <div class="tag-group">
+              <span>Pets</span>
+              <span>Wellness</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+
+      reveals.forEach((element) => {
+
+        const top = element.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 100){
+          element.classList.add('active');
+        }
+
+      });
+
+    });
+
+    window.dispatchEvent(new Event('scroll'));
+
+  </script>
+
+</body>
+</html>
