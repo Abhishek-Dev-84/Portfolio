@@ -126,22 +126,10 @@ Deployment optimization
 
 
 
----
-
-INSTALLATION
-
-Clone the repository:
-
-git clone https://github.com/your-username/your-repo-name.git
-
-Move into the project directory:
-
-cd your-repo-name
 
 Run the project locally.
 
 
----
 
 CONTACT
 
